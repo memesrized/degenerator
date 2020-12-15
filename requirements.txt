@@ -1,4 +1,5 @@
 fastapi
 black
 flake8
+transformers
 uvicorn
