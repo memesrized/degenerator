@@ -7,8 +7,9 @@ RUN pip install torch==1.5.0+cpu -f https://download.pytorch.org/whl/torch_stabl
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-ADD . /degenerator
-WORKDIR /degenerator
+ADD ./degenerator /degenerator
+ADD ./models /models
+WORKDIR /
 EXPOSE 8000
 
 CMD uvicorn degenerator.main:app --reload --host 0.0.0.0
