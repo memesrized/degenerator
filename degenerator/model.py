@@ -3,6 +3,7 @@ import time
 from random import randint
 
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from degenerator.bless_rng import get_random_fact
 
 
 class TextDegenerator:
@@ -20,7 +21,7 @@ class TextDegenerator:
             )
 
     def generate(self):
-        text = "What should i say to you my friend?"
+        text = get_random_fact()
 
         input_ids = self.tokenizer.encode(text, return_tensors="pt")
 
@@ -33,5 +34,5 @@ class TextDegenerator:
             early_stopping=True,
         )
         return self.tokenizer.decode(
-            beam_outputs[randint(0, len(beam_outputs))], skip_special_tokens=True
+            beam_outputs[randint(0, len(beam_outputs) - 1)], skip_special_tokens=True
         )

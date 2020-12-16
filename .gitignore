@@ -2,6 +2,8 @@
 data/
 models/
 notebooks/
+temp_img.jpg
+random_style.jpg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
