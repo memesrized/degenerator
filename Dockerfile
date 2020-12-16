@@ -9,6 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 ADD ./degenerator /degenerator
 ADD ./models /models
+ADD ./token.txt /token.txt
 WORKDIR /
 EXPOSE 8000
 
