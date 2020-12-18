@@ -1,0 +1,13 @@
+FROM python:3.7-slim
+
+RUN pip install --upgrade pip
+
+COPY ui ui/
+
+RUN pip install --no-cache-dir streamlit==0.72.0
+
+EXPOSE 8501
+
+WORKDIR /ui
+
+CMD streamlit run degenerator_ui.py
