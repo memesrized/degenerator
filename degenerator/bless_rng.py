@@ -1,7 +1,7 @@
 import requests
 
 with open("token.txt") as file:
-    token = file.read()
+    token = file.read().strip()
 
 
 def get_random_pic():
