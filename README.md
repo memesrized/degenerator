@@ -13,7 +13,11 @@ Flow:
 # How to run:
 
 1. Download model   
-You can put [this files](https://huggingface.co/gpt2/tree/main) to `models/gpt2` manually or just use `git clone https://huggingface.co/gpt2 models/gpt2` command
+You can put [this files](https://huggingface.co/gpt2/tree/main) to `models/gpt2` manually or use the following commands:
+```
+git lfs install
+git clone https://huggingface.co/gpt2 models/gpt2
+```
 2. Get your own token from your profile [here](https://deepai.org/) and put it in `/token.txt`    
     - You can log in with google account.
     - 5$ free limit (10 requests - 1 cent)
